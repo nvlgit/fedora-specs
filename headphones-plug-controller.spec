@@ -4,23 +4,26 @@
 %global owner nvlgit
 
 
-Name:           headphones-plug-controller
-Version:        0.1.0
-Release:        1.20171217git%{shortcommit}%{?dist}
-Summary:        Headphones plug detector with playback control
+Name:             headphones-plug-controller
+Version:          0.1.0
+Release:          1.20171217git%{shortcommit}%{?dist}
+Summary:          Headphones plug detector with playback control
 
-License:        MIT      
-URL:            https://github.com/nvlgit/headphones-plug-controller
-Source0:        https://github.com/%{owner}/%{name}/archive/%{commit}/%{name}-%{commit}.tar.gz
+License:          MIT      
+URL:              https://github.com/nvlgit/headphones-plug-controller
+Source0:          https://github.com/%{owner}/%{name}/archive/%{commit}/%{name}-%{commit}.tar.gz
 
-BuildRequires:  meson
-BuildRequires:  vala
-BuildRequires:  glib2-devel
-BuildRequires:  pulseaudio-libs-devel
+BuildRequires:    meson
+BuildRequires:    vala
+BuildRequires:    glib2-devel
+BuildRequires:    pulseaudio-libs-devel
 %{?systemd_requires}
-BuildRequires:  systemd
+BuildRequires:    systemd
 
-Requires:       pulseaudio
+Requires(post):   systemd
+Requires(preun):  systemd
+Requires(postun): systemd
+Requires:         pulseaudio
 
 %description
 This program detects when you plug out your headphones and pauses music for you. When you plug them in again, it resumes all the players that were paused by this program.
