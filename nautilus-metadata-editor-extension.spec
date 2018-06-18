@@ -13,7 +13,7 @@ Summary:        Metadata Editor Extension for the Nautilus file manager
 Group:          User Interface/Desktops
 License:        GPLv3
 URL:            https://gitlab.com/nvlgit/nautilus-metadata-editor-extension
-Source0:        https://github.com/nvlgit/%{name}/archive/%{version}.tar.gz
+Source0:        https://github.com/nvlgit/nautilus-metadata-editor-extension/archive/%{name}-%{version}.tar.gz
 
 
 BuildRequires:  pkgconfig(glib-2.0) >= %{glib2_version}
@@ -33,7 +33,7 @@ This extension adds Metadata Editor for audio files to the Nautilus file manager
 
 
 %prep
-%autosetup -n %{name}
+%autosetup
 
 
 %build
