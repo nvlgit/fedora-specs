@@ -13,7 +13,7 @@ Summary:        Metadata Editor Extension for the Nautilus file manager
 Group:          User Interface/Desktops
 License:        GPLv3
 URL:            https://gitlab.com/nvlgit/nautilus-metadata-editor-extension
-Source0:        %{name}-%{version}.tar.xz
+Source0:        https://github.com/nvlgit/%{name}/archive/%{version}.tar.gz
 
 
 BuildRequires:  pkgconfig(glib-2.0) >= %{glib2_version}
