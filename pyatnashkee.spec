@@ -1,21 +1,22 @@
 %global debug_package   %{nil}
 %global app_id   com.gitlab.nvlgit.pyatnashkee
-%global gtk3_version 3.22
 
 Name:           pyatnashkee
-Version:        0.1.0
-Release:        2%{?dist}
+Version:        0.2.0
+Release:        1%{?dist}
 Summary:        15-puzzle
 
 License:        GPLv3      
 URL:            https://gitlab.com/nvlgit/pyatnashkee
 Source0:        https://gitlab.com/nvlgit/pyatnashkee/-/archive/master/pyatnashkee-master.tar.gz
 
-BuildRequires:  pkgconfig(gtk+-3.0) >= %{gtk3_version}
+BuildRequires:  pkgconfig(gtk+-4.0)
 BuildRequires:  vala >= 0.40
 BuildRequires:  meson >= 0.40
+BuildRequires:  desktop-file-utils
 
-Requires:       gtk3 >= %{gtk3_version}
+
+Requires:       gtk4
 
 %description
 A classic 15-puzzle game 
@@ -64,6 +65,9 @@ fi
 
 
 %changelog
+* Sat Sep 08 2018 - 0.2.0-1
+- jump to Gtk4
+
 * Sat Jun 23 2018 - 0.1.0-2
 - complete app
 
