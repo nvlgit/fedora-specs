@@ -1,6 +1,5 @@
 
 %global glib2_version 2.50
-%global gtk3_version 3.22
 %global gtk4_version 4.8
 %global taglib_c_version 1.11
 %global editor_name com.gitlab.nvlgit.metadata-editor
@@ -19,8 +18,8 @@ Source0:        https://gitlab.com/nvlgit/%{name}/-/archive/%{version}/%{name}-%
 BuildRequires:  pkgconfig(glib-2.0) >= %{glib2_version}
 BuildRequires:  pkgconfig(gmodule-2.0) >= %{glib2_version}
 BuildRequires:  pkgconfig(gio-2.0) >= %{glib2_version}
-BuildRequires:  pkgconfig(gtk+-3.0) >= %{gtk3_version}
 BuildRequires:  pkgconfig(gtk4) >= %{gtk4_version}
+BuildRequires:  pkgconfig(libadwaita-1) >= 1.2
 BuildRequires:  pkgconfig(taglib_c) >= %{taglib_c_version}
 BuildRequires:  vala >= 0.40
 BuildRequires:  pkgconfig(libnautilus-extension-4)
